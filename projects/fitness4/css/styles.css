@@ -1,0 +1,109 @@
+body
+{
+	background-color: #ccc;
+	background: url(images/hero-image.jpg)
+}
+
+header
+{
+	width: 25%;
+	float: left;
+	border: solid 1px red;
+	align-items: center;
+	display: flex;
+}
+
+nav
+{
+	width: 70%;
+	margin: 5em 3em 0 0;
+	border: solid 1px blue;
+	top: 20px;
+	right: 20px;
+	position: absolute;
+}
+
+nav ul 
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+main
+{
+	clear: left;
+	border: solid 1px green;
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.25em;
+}
+
+li
+{
+	display: inline-block;
+	font-size: 1.75em;
+	border: solid 1px beige;
+}
+
+nav a 
+{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li a
+{
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: .5em 1em;
+	border: solid 1px purple;
+	text-decoration: none;
+	
+}
+
+img
+{
+	max-width: 100%;
+	display: block;
+	
+}
+
+footer p
+{
+	font-size: .75em;
+	text-align: center;
+	color: #fff;
+	padding: 0 1em;
+}
+
+footer p a
+{
+	color: #fff;
+	text-decoration: none;
+	
+}
+
+#weights, #cardio, #training{
+	/* id names*/
+	width: 29%;
+	float: left;
+	margin: 0 2%;
+}
+
+#exercises
+{
+	clear: left;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #f2f2f2;
+}
+
+#contact
+{
+	color: #660;
+	text-decoration; none;
+}
