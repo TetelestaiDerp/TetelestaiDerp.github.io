@@ -1,23 +1,44 @@
-body
+/*  
+Author: Davyd Yendrys
+Date: September 18, 2025
+File Name: stle.css
+*/
+
+/* CSS RESET */
+body, header, nav, main, footer, h1, div, img
 {
-	background-color: #ccc;
-	background: url(images/hero-image.jpg)
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
+/* style rules for body and image*/
+body
+{
+	background-color: #000;
+}
+
+img
+{
+	max-width: 100%;
+	display: block;
+	
+}
+
+/* Style rule for header */
 header
 {
 	width: 25%;
 	float: left;
-	border: solid 1px red;
 	align-items: center;
 	display: flex;
 }
 
+/* Style rules for navigation area */
 nav
 {
 	width: 70%;
 	margin: 5em 3em 0 0;
-	border: solid 1px blue;
 	top: 20px;
 	right: 20px;
 	position: absolute;
@@ -25,19 +46,52 @@ nav
 
 nav ul 
 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+	list-style-type: none;
+	margin: 0;
+	text-align: right;
 }
 
+nav li
+{
+	display: inline-block;
+	font-size: 1.5em;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: bold;
+}
+
+nav li a
+{
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: .5em 1em;
+	text-decoration: none;
+	
+}
+
+/* Style rules for the main content */
 main
 {
 	clear: left;
-	border: solid 1px green;
 	background-color: #fff;
 	padding: 2%;
 	font-size: 1.25em;
+}
+
+/* Style rules for footer content */
+footer p
+{
+	font-size: .75em;
+	text-align: center;
+	color: #fff;
+	padding: 0 1em;
+}
+
+footer p a
+{
+	color: #fff;
+	text-decoration: none;
+	
 }
 
 li
@@ -54,39 +108,6 @@ nav a
   font-weight: bold;
 }
 
-nav li a
-{
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: .5em 1em;
-	border: solid 1px purple;
-	text-decoration: none;
-	
-}
-
-img
-{
-	max-width: 100%;
-	display: block;
-	
-}
-
-footer p
-{
-	font-size: .75em;
-	text-align: center;
-	color: #fff;
-	padding: 0 1em;
-}
-
-footer p a
-{
-	color: #fff;
-	text-decoration: none;
-	
-}
-
 #weights, #cardio, #training{
 	/* id names*/
 	width: 29%;
@@ -100,10 +121,45 @@ footer p a
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
 	background-color: #f2f2f2;
+	padding: 1% 2%;
+}
+
+#exercises dt
+{
+	font-weight: bold;
+}
+
+#exercises dd
+{
+	padding: 0.5% 1% 2% 0;
 }
 
 #contact
 {
-	color: #660;
+	text-align: center;
+}
+
+#contact a
+{
+	color: #666600;
 	text-decoration; none;
+}
+
+.action
+{
+	font-size: 1.35em;
+	color: #666600;
+	font-weight: bold;
+}
+
+.external-link
+{
+	color: #666600;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.map
+{
+	border: 8px soild #000;
 }
