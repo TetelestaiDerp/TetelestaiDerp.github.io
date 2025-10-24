@@ -20,7 +20,7 @@ body
 h1, h2, h3 
 {
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 /* Header styling */
@@ -66,9 +66,9 @@ nav li
     display: block;
 }
 
-nav li:hover:active
+nav:hover
 {
-    background-color: #000;
+    background-color: #fff;
 }
 
 /* Main content */
@@ -77,6 +77,9 @@ main
     max-width: 900px;
     margin: auto;
     padding: 20px;
+}
+* {
+    box-sizing: border-box;
 }
 
 /* Footer */
@@ -111,8 +114,17 @@ ul
 /* Responsive images */
 img 
 {
-    max-width: 100%;
+    max-width: 35%;
     height: auto;
+}
+
+.pic-text
+{
+    bottom: 0;
+    background: #4ead3a;
+    color: #ccc;
+    padding: 5px;
+    text-align: center;
 }
 
 /* Make phone layout */
@@ -131,8 +143,22 @@ img
 	{
         padding: 10px;
     }
+    .tel-num
+    {
+        text-align: center;
+    }
+    h2 
+    {
+        text-align: center;
+    }
+    img 
+    {
+        text-align: center;
+    }
 }
 
+
+/* Tablet Vierport */
 @media screen and (min-width: 630px)
 {
     .mobile
