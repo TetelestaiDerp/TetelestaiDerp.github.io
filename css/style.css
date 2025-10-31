@@ -23,6 +23,11 @@ h1, h2, h3
     font-weight: bold;
 }
 
+h4
+{
+    text-align: center;
+}
+
 /* Header styling */
 header 
 {
@@ -95,7 +100,7 @@ footer
 
 footer p a
 {
-    color: #4CAF50;
+    color: #2e8b57;
 }
 
 /* Paragraph spacing */
@@ -118,15 +123,78 @@ img
     height: auto;
 }
 
+/* Style rules for form elements */
+fieldset, input, select, textarea
+{
+	margin-bottom: 2%;
+}
+
+fieldset legend
+{
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+label
+{
+	display: block;
+	padding-top: 3%;
+}
+
+form
+{
+	margin: 0 auto;
+	border: none;
+	display: block;
+	padding: 2%;
+	background-color: #4ead3a;
+	font-size: 1em;
+	border-radius: 10px;
+    text-align: center;
+}
+
 .pic-text
 {
     bottom: 0;
-    background: #4ead3a;
+    background: #4CAF50;
     color: #ccc;
     padding: 5px;
     text-align: center;
 }
 
+table
+{
+    border: 1px solid #000;
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 80%;
+}
+
+th, td
+{
+    border: 2px solid #4ead3a;
+}
+
+th
+{
+	background-color: #000;
+	color: #fff;
+	font-size: 1.25em;
+}
+
+iframe
+{
+    text-align: center;
+    display: block;
+    border: none;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+tr:nth-child(odd)
+{
+	background-color: #ccc;
+}
 /* Make phone layout */
 @media screen and (min-width: 375px) 
 {
@@ -150,10 +218,26 @@ img
     h2 
     {
         text-align: center;
+        display: block;
     }
     img 
     {
         text-align: center;
+    }
+    iframe
+    {
+        display: block;
+        margin: 40px auto;
+        width: 100%;
+        height: auto;
+    }
+    font
+    {
+        text-align: center;
+    }
+    table
+    {
+        width: 100%;
     }
 }
 
@@ -178,6 +262,17 @@ img
         font-size: 25px;
         display: inline;
     }
+    iframe
+    {
+        display: block;
+        margin: 60px auto;
+        width: 100%;
+        height: 100%;
+    }
+    table
+    {
+        width: 65%;
+    }
 }
 
 .mobile
@@ -194,4 +289,6 @@ img
 .tel-num
 {
     font-size: 1.25em;
+    border: 1px solid black;
+    box-shadow: 5px 2px 2px;
 }
