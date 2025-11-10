@@ -71,9 +71,9 @@ nav li
     display: block;
 }
 
-nav:hover
+nav::after:hover
 {
-    background-color: #fff;
+    background-color: #000000;
 }
 
 /* Main content */
@@ -280,12 +280,27 @@ tr:nth-child(odd)
     display: block;
 }
 
+.project-container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 .project-font
 {
-    font-size: auto;
-    text-decoration: none;
-
+    text-align: left;
+    display: block;
 }
+
+.javascipt-projects
+{
+    display: block;
+    text-align: right;
+}
+
 .tel-num
 {
     font-size: 1.25em;
