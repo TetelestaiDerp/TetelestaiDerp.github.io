@@ -7,7 +7,7 @@
 }
 
 /* Body and general text */
-body 
+body
 {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -76,6 +76,11 @@ nav::after:hover
     background-color: #000000;
 }
 
+nav::after
+{
+    background-color: #000000;
+}
+
 /* Main content */
 main 
 {
@@ -120,6 +125,14 @@ ul
 img 
 {
     max-width: 35%;
+    height: auto;
+}
+
+video
+{
+    text-align: center;
+    display: block;
+    width: 100%;
     height: auto;
 }
 
@@ -223,6 +236,8 @@ tr:nth-child(odd)
     img 
     {
         text-align: center;
+        width: auto;
+        height: auto;
     }
     iframe
     {
