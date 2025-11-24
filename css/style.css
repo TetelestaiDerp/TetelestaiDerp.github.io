@@ -45,17 +45,14 @@ nav
     background-color: #f4f4f4;
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px;
     border-bottom: #2e8b57;
 }
 
 nav a 
 {
-    display: flex;
     color: #2e8b57;
     font-weight: bold;
     margin: 0 10px;
-    transition: color 0.3s ease;
 }
 
 nav p 
@@ -68,17 +65,6 @@ nav li
 {
     text-decoration: none;
     font-family: 'Francois One', sans-serif;
-    display: block;
-}
-
-nav::after:hover
-{
-    background-color: #000000;
-}
-
-nav::after
-{
-    background-color: #000000;
 }
 
 /* Main content */
@@ -256,7 +242,6 @@ tr:nth-child(odd)
     }
 }
 
-
 /* Tablet Vierport */
 @media screen and (min-width: 630px)
 {
@@ -321,4 +306,13 @@ tr:nth-child(odd)
     font-size: 1.25em;
     border: 1px solid black;
     box-shadow: 5px 2px 2px;
+}
+
+/* Tablet Vierport */
+@media screen and (min-width: 630px)
+{
+    nav a
+    {
+        display: inline;
+    }
 }
