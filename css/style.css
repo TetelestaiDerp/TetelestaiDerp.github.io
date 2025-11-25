@@ -308,6 +308,11 @@ tr:nth-child(odd)
     box-shadow: 5px 2px 2px;
 }
 
+#favorites
+{
+    display: block;
+}
+
 /* Tablet Vierport */
 @media screen and (min-width: 630px)
 {
