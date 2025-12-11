@@ -117,6 +117,12 @@ img
 {
     max-width: 35%;
     height: auto;
+    box-shadow: 5px #000;
+}
+
+img:hover
+{
+    transform: scale(1.1);
 }
 
 video
@@ -199,7 +205,7 @@ tr:nth-child(odd)
 {
 	background-color: #ccc;
 }
-/* Make phone layout */
+/* Make mobile viewport */
 @media screen and (min-width: 375px) 
 {
     body 
@@ -245,15 +251,15 @@ tr:nth-child(odd)
     {
         width: 100%;
     }
+    .mobile-nav
+    {
+        color: #000;
+    }
 }
 
-/* Tablet Vierport */
+/* Tablet Viewport */
 @media screen and (min-width: 630px)
 {
-    .mobile
-    {
-        text-align: center;
-    }
     li 
     {
         text-align: left;
@@ -278,6 +284,53 @@ tr:nth-child(odd)
     {
         width: 65%;
     }
+    .mobile, .mobile-nav
+	{
+		display: none;
+	}
+    nav:not(.mobile-nav)
+    {
+        display: block;
+    }
+    .tablet-desktop
+	{
+		display: block;
+	}
+    #menu-links
+    {
+        color: #2e8b57;
+    }
+}
+
+.mobile-nav a
+{
+	color: #2e8b57;
+	font-family: 'Francois One', sans-serif;
+	text-align: center;
+	font-size: 1.3em;
+	text-decoration: none;
+	padding: 5px 0;
+	display: block;
+}
+
+.menu-icon 
+{
+    font-size: 2.5em;
+}
+
+.mobile-nav a.menu-icon
+{
+	display: block;
+	position: relative;
+	right: 0;
+	top: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.tablet-desktop, #menu-links
+{
+	display: none;
 }
 
 .mobile
@@ -325,9 +378,4 @@ tr:nth-child(odd)
     {
         display: inline;
     }
-}
-
-audio
-{
-    display:
 }
