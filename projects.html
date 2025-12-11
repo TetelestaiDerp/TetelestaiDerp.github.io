@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Personal Pertfolio Yendrys</title>
+		<title>My Projects | Personal Pertfolio Yendrys</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,27 @@
 		<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Francois+One&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<header>
+
+		<!-- Mobile Nav -->
+		 <nav class="mobile-nav">
+			<div id="menu-links">
+				<a href="index.html">Home</a>
+            	<a href="about.html">About Me</a>
+            	<a href="achievements.html">Achievements</a>
+            	<a href="contact.html">Contact Me</a>
+				<a href="projects.html">Projects</a>
+				<a href="hobby.html">Hobby</a>
+				<a href="favorites.html">Favorites</a>
+			</div>
+			<a class="menu-icon" onclick="hamburger()">
+				<div>&#9776;</div>
+			</a>
+		 </nav>
+
+		<header id="ffc-logo">
 			<h1>Projects</h1>
 		</header>
-		<nav>
+		<nav class="tablet-desktop">
 			<p>
 				<a href="index.html">Home</a>
             	<a href="about.html">About Me</a>
@@ -38,6 +55,7 @@
 						<li><p><a href="projects/html/fitness8/index.html">Fitness-Ch8</a></p></li>
 						<li><p><a href="projects/html/fitness9/index.html">Fitness-Ch9</a></p></li>
 						<li><p><a href="projects/html/fitness10/index.html">Fitness-Ch10</a></p></li>
+						<li><p><a href="projects/html/fitness11/index.html">Fitness-Ch11</a></p></li>
 					</ul>
 				</div>
 
@@ -61,5 +79,8 @@
 		<footer>
 			<p>&copy; 2025 All Rights Reserved</p>
 		</footer>
+
+		<script src="scripts/script.js"></script>
+
 	</body>
 </html>
