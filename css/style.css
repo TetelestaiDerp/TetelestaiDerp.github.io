@@ -277,6 +277,11 @@ tr:nth-child(odd)
     {
         color: #000;
     }
+    .social
+    {
+        display: inline-block;
+	    width: 20%;
+    }
 }
 
 /* Tablet Viewport */
@@ -321,6 +326,17 @@ tr:nth-child(odd)
     #menu-links
     {
         color: #2e8b57;
+    }
+    .social
+    {
+        display: inline-block;
+	    width: 10%;
+    }
+
+    .social img
+    {
+	    display: flex;
+	    padding: 5%;
     }
 }
 
