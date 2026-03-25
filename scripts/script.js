@@ -28,8 +28,7 @@ function hamburger()
 
 // A countdown that shows how many days are left until graduation
 if (window.location.pathname.includes("index.html") || window.location.pathname === "/") 
-    {
-
+{
     const article = document.querySelector(".intro article");
 
     const title = document.createElement("h3");
@@ -82,29 +81,49 @@ if (window.location.pathname.includes("index.html") || window.location.pathname 
     createBox("Minutes", "minutes");
     createBox("Seconds", "seconds");
 
-    // Insert AFTER paragraph
+    // Add to page
     article.appendChild(title);
     article.appendChild(container);
 
-    // Graduation date (34 days from now)
-    let graduationDate = new Date();
-    graduationDate.setDate(graduationDate.getDate() + 34);
+    let graduationDate;
+    let savedDate = localStorage.getItem("gradDate");
+
+    if (savedDate) 
+    {
+        graduationDate = new Date(savedDate);
+    } 
+    else 
+    {
+        graduationDate = new Date();
+        graduationDate.setDate(graduationDate.getDate() + 34);
+        localStorage.setItem("gradDate", graduationDate);
+    }
 
     function countdown() 
     {
         let now = new Date();
         let timeLeft = graduationDate - now;
 
-        let daysLeft = timeLeft / (1000 * 60 * 60 * 24);
-        let hrsLeft = (daysLeft - Math.floor(daysLeft)) * 24;
-        let minsLeft = (hrsLeft - Math.floor(hrsLeft)) * 60;
-        let secsLeft = (minsLeft - Math.floor(minsLeft)) * 60;
+        if (timeLeft <= 0) 
+        {
+            document.getElementById("days").textContent = "0";
+            document.getElementById("hours").textContent = "0";
+            document.getElementById("minutes").textContent = "0";
+            document.getElementById("seconds").textContent = "0";
+            return;
+        }
 
-        document.getElementById("days").textContent = Math.floor(daysLeft);
-        document.getElementById("hours").textContent = Math.floor(hrsLeft);
-        document.getElementById("minutes").textContent = Math.floor(minsLeft);
-        document.getElementById("seconds").textContent = Math.floor(secsLeft);
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+        let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+        let seconds = Math.floor((timeLeft / 1000) % 60);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
     }
 
+    countdown();
     setInterval(countdown, 1000);
 }
